@@ -11,6 +11,9 @@
     7、relative : 相对路径，开启时，publicPath 将变为 './'，dist 目录下所有文件在同一层级，可直接访问 index.html
     8、vendor   ：用于生成 dll 包，当 (dll不存在) (vendor被改变) (包的版本被更换) 时，请 npm run dll
 
+    兼容IE的办法：
+    将 mobx 的版本降至 v4.9.2。IE9 不支持 transition 和 animation，因此动画会失效。不支持 IE8 及以下版本。
+
    ====================================================== */
 const NODE_ENV = process.env.NODE_ENV || 'development'
 const fs       = require('fs')
