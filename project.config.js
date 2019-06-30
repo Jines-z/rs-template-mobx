@@ -45,7 +45,7 @@ module.exports = {
     srcDir     : path.resolve(__dirname, 'src'),
     outDir     : path.resolve(__dirname, 'dist'),
     dllDir     : path.resolve(__dirname, 'dll'),
-    publicPath : NODE_ENV === 'development' ? './' : 'https://jines-z.github.io/react-starter-kit/',
+    publicPath : NODE_ENV === 'development' ? './' : 'https://jines-z.github.io/rs-admin-cli/',
     esLint     : true,
     relative   : false,
     vendor     : ['react', 'react-dom', 'react-router-dom', 'react-loadable', 'mobx', 'mobx-react', 'crypto-js', 'js-cookie', 'flyio'],
