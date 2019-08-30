@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Menu } from 'antd'
 import router from '@/router/config'
-import './index.less'
 const SubMenu = Menu.SubMenu
 
 @withRouter
@@ -34,7 +33,7 @@ class SideMenu extends Component {
     titleNode = item => {
         return (
             <span>
-                <span className={'font icon-' + item.icon}></span>
+                <span className={'font mr-10 icon-' + item.icon}></span>
                 <span>{item.name}</span>
             </span>
         )
@@ -42,7 +41,7 @@ class SideMenu extends Component {
 
     render() {
         return (
-            <div className='SideMenu_wrap'>
+            <div className='mt-5'>
                 <Menu
                     mode='inline'
                     theme='dark'
@@ -63,7 +62,7 @@ class SideMenu extends Component {
                             )
                             : (
                                 <Menu.Item key={item.path}>
-                                    <span className={'font icon-' + item.icon}></span>
+                                    <span className={'font mr-10 icon-' + item.icon}></span>
                                     <span>{item.name}</span>
                                 </Menu.Item>
                             )

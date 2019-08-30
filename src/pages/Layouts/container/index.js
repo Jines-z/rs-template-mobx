@@ -13,7 +13,7 @@ class Layouts extends Component {
 
     render() {
         return (
-            <div className='Layouts_wrap clearFix'>
+            <div className='Layouts_wrap w100p h100p clearfix'>
                 <Left />
                 <Right logout={this.logout} />
             </div>

@@ -29,6 +29,10 @@
 
 .ant-menu-dark {
   .ant-menu-item {
+    color: rgba(255, 255, 255, 0.6) !important;
+    &:hover {
+      color: #fff !important;
+    }
     &:after {
       content: '';
       height: 100%;
@@ -42,6 +46,7 @@
     }
   }
   .ant-menu-item-selected {
+    color: #fff !important;
     background-color: #363e4f !important;
     &:after {
       opacity: 1;
@@ -54,13 +59,20 @@
 
 .ant-spin-nested-loading {
   .ant-spin {
-    background-color: #fff;
     max-height: 500px !important;
     .ant-spin-text {
       letter-spacing: 3px;
+      margin-top: 10px;
     }
   }
   .ant-spin-blur {
-    opacity: 0;
+    opacity: .4;
   }
+  .ant-spin-container {
+      transition: opacity .2s;
+  }
+}
+
+.ant-menu {
+  border-right: none !important;
 }

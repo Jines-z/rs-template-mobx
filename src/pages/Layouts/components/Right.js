@@ -21,12 +21,9 @@ class Right extends Component {
         }
     }
 
-    titleNode = () => {
+    tipNode = () => {
         return (
-            <span
-                style={{ fontSize: '14px', cursor: 'pointer' }}
-                onClick={this.logout}
-            >
+            <span className='f14 cur-p' onClick={this.logout}>
                 退出
             </span>
         )
@@ -37,19 +34,20 @@ class Right extends Component {
     }
 
     render() {
-        const { name } = this.props.Root.userInfo
+        const { userInfo, loading } = this.props.Root
+        const { name } = userInfo
         return (
-            <div className='right'>
-                <div className='header clear clearFix'>
-                    <div className='user'>
-                        <span className='font icon-touxiang'></span>
-                        <Tooltip title={this.titleNode()}>
-                            <span className='name'>{name}</span>
+            <div className='right ov-h'>
+                <div className='header h60 relative clear clearfix'>
+                    <div className='user f14 h100p fr'>
+                        <span className='font icon-touxiang mr-5'></span>
+                        <Tooltip title={this.tipNode()}>
+                            <span className='cur-p'>{name}</span>
                         </Tooltip>
                     </div>
                 </div>
                 <div className='routeWrap'>
-                    <Loading>
+                    <Loading loading={loading}>
                         <Router />
                     </Loading>
                 </div>

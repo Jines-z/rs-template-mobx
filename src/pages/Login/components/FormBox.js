@@ -3,7 +3,7 @@ import { Form, Input, Button } from 'antd'
 import { inject, observer } from 'mobx-react'
 const FormItem = Form.Item
 
-@inject('Login')
+@inject('Root')
 @observer
 class FromBox extends Component {
     constructor(props) {
@@ -17,25 +17,25 @@ class FromBox extends Component {
 
     render() {
         const { getFieldDecorator } = this.props.form
-        const { loading } = this.props.Login
+        const { loading } = this.props.Root
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form className='w80p m-auto' onSubmit={this.handleSubmit}>
                 <FormItem>
                     {getFieldDecorator('userName', {
                         rules: [{ required: true, message: '输入admin' }]
                     })(
-                        <Input prefix={<span className='font icon-user'></span>} placeholder='admin' />
+                        <Input prefix={<span className='font icon-user f12 fw8 o-30 c-theme'></span>} placeholder='admin' />
                     )}
                 </FormItem>
                 <FormItem>
                     {getFieldDecorator('password', {
                         rules: [{ required: true, message: '密码是123456' }]
                     })(
-                        <Input prefix={<span className='font icon-mima'></span>} type='password' placeholder='123456' />
+                        <Input prefix={<span className='font icon-mima f12 fw8 o-30 c-theme'></span>} type='password' placeholder='123456' />
                     )}
                 </FormItem>
                 <FormItem>
-                    <Button type='primary' htmlType='submit' loading={loading}>
+                    <Button className='w100p' type='primary' htmlType='submit' loading={loading}>
                         登录
                     </Button>
                 </FormItem>

@@ -7,7 +7,7 @@ import service from '@/service'
 import FormBox from '../components/FormBox'
 import '../index.less'
 
-@inject('Login', 'Root')
+@inject('Root')
 @observer
 class Login extends Component {
     constructor(props) {
@@ -15,27 +15,23 @@ class Login extends Component {
     }
 
     submit = form => {
-        const { Root, Login, history } = this.props
+        const { Root, history } = this.props
+        const { updateName, loading } = Root
         form.validateFields(async(err, values) => {
-            if (!err) {
-                Login.setLoading(true)
+            if (!err && !loading) {
                 let { userName, password } = values
                 const param = {
                     userName,
                     password
                 }
-                const result = await service.login(param).catch(err => {
-                    Login.setLoading(false)
-                    throw err
-                })
-                Login.setLoading(false)
+                const result = await service.login(param)
                 if (result.success) {
                     let message = `M&${userName}&${password}`
                     let key = 'react_starter'
                     let session = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA1(message, key))
                     Cookies.set('JSESSIONID', session, { expires: 1, path: '/' })
                     Cookies.set('userName', userName, { expires: 1, path: '/' })
-                    Root.updateName(userName)
+                    updateName(userName)
                     history.push('/home')
                 } else {
                     message.error('账号：admin ； 密码：123456')
@@ -46,8 +42,8 @@ class Login extends Component {
 
     render() {
         return (
-            <div className='Login_wrap clearFix'>
-                <div className='form P_auto'>
+            <div className='Login_wrap w100p h100p clearfix'>
+                <div className='form bgc-white tc pt-50 P_auto'>
                     <span className='font icon-react'></span>
                     <FormBox submit={this.submit} />
                 </div>

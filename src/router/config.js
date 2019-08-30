@@ -2,14 +2,14 @@
 import Loadable from 'react-loadable'
 import DelayLoading from '@/components/DelayLoading'
 
-const Home         = Loadable({loader: () => import(/* webpackChunkName: "Home" */ '@/pages/Home'), loading: DelayLoading, delay:3000})
-const EmployeesList= Loadable({loader: () => import(/* webpackChunkName: "EmployeesList" */ '@/pages/Employees/EmployeesList'), loading: DelayLoading, delay:3000})
-const UserList     = Loadable({loader: () => import(/* webpackChunkName: "UserList" */ '@/pages/User/UserList'), loading: DelayLoading, delay:3000})
-const UserOrder    = Loadable({loader: () => import(/* webpackChunkName: "UserOrder" */ '@/pages/User/UserOrder'), loading: DelayLoading, delay:3000})
-const UserManager  = Loadable({loader: () => import(/* webpackChunkName: "UserManager" */ '@/pages/User/UserManager'), loading: DelayLoading, delay:3000})
-const EndOrder     = Loadable({loader: () => import(/* webpackChunkName: "EndOrder" */ '@/pages/User/EndOrder'), loading: DelayLoading, delay:3000})
-const VisualList   = Loadable({loader: () => import(/* webpackChunkName: "VisualList" */ '@/pages/Visual/VisualList'), loading: DelayLoading, delay:3000})
-const PriceConfig  = Loadable({loader: () => import(/* webpackChunkName: "PriceConfig" */ '@/pages/Price/PriceConfig'), loading: DelayLoading, delay:3000})
+const Home         = Loadable({loader: () => import(/* webpackChunkName: "Home" */ '@/pages/Home'), loading: DelayLoading})
+const EmployeesList= Loadable({loader: () => import(/* webpackChunkName: "EmployeesList" */ '@/pages/Employees/EmployeesList'), loading: DelayLoading})
+const UserList     = Loadable({loader: () => import(/* webpackChunkName: "UserList" */ '@/pages/User/UserList'), loading: DelayLoading})
+const UserOrder    = Loadable({loader: () => import(/* webpackChunkName: "UserOrder" */ '@/pages/User/UserOrder'), loading: DelayLoading})
+const UserManager  = Loadable({loader: () => import(/* webpackChunkName: "UserManager" */ '@/pages/User/UserManager'), loading: DelayLoading})
+const EndOrder     = Loadable({loader: () => import(/* webpackChunkName: "EndOrder" */ '@/pages/User/EndOrder'), loading: DelayLoading})
+const VisualList   = Loadable({loader: () => import(/* webpackChunkName: "VisualList" */ '@/pages/Visual/VisualList'), loading: DelayLoading})
+const PriceConfig  = Loadable({loader: () => import(/* webpackChunkName: "PriceConfig" */ '@/pages/Price/PriceConfig'), loading: DelayLoading})
 
 export default [{
     name: '首页',

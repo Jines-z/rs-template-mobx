@@ -1,15 +1,13 @@
 /* ========================================================
 
-    ** 全局Store **
+    ** Store **
 
     所有 store 均在此统一管理
-    用法见 @/pages/Login/container/index.js
+    用法见 @/pages/Login/
 
    ====================================================== */
 import Root from './Root'
-import Login from './Login'
 
 export default {
-    Root,
-    Login
+    Root
 }
