@@ -24,7 +24,7 @@ const branch   = fs.existsSync(path.join(__dirname, '.git')) ? fs.readFileSync(p
 module.exports = {
     html: {
         title: 'RS-ADMIN-CLI',
-        fav: 'https://jines-z.github.io/images/favicon.ico'
+        fav  : 'https://jines-z.github.io/images/favicon.ico'
     },
     theme: {
         'primary-color'       : '#495060',
