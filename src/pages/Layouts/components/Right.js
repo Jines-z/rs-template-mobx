@@ -14,7 +14,7 @@ class Right extends Component {
         super(props)
     }
 
-    componentWillMount() {
+    componentDidMount() {
         let { userInfo, updateName } = this.props.Root
         if (userInfo.name == '') {
             updateName(Cookies.get('userName'))

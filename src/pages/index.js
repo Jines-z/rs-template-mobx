@@ -25,7 +25,7 @@ class Pages extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         if (this.pathname == '/') {
             if (Cookies.get('JSESSIONID')) {
                 this.props.history.replace('/home')
@@ -37,7 +37,7 @@ class Pages extends Component {
         }
     }
 
-    componentWillReceiveProps() {
+    UNSAFE_componentWillReceiveProps() {
         this.checkJsessionID()
     }
 
