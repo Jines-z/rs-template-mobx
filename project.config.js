@@ -11,6 +11,7 @@
     7、relative ：相对路径，开启时，publicPath 将变为 './'，dist 目录下所有文件在同一层级，可直接访问 index.html
     8、vendor   ：用于生成 dll 包，当 (dll不存在) (vendor被改变) (包的版本被更换) 时，请 npm run dll
     9、config   ：用于扩展 webpack 配置
+    10、update  ：用于控制是否在每次运行时检查编译器的版本并更新
 
     兼容IE的办法：
     将 mobx 的版本降至 v4.9.2。IE9 不支持 transition 和 animation，因此动画会失效。不支持 IE8 及以下版本。
@@ -50,6 +51,7 @@ module.exports = {
     open       : true,
     esLint     : true,
     relative   : false,
-    vendor     : ['react', 'react-dom', 'react-router-dom', 'react-loadable', 'mobx', 'mobx-react', 'crypto-js', 'js-cookie', 'flyio'],
+    update     : true,
+    vendor     : ['react', 'react-dom', 'react-router-dom', 'react-loadable', 'mobx', 'mobx-react', 'crypto-js', 'js-cookie', 'flyio', 'reg-rules'],
     config     : {}
 }

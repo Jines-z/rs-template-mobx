@@ -43,7 +43,7 @@ class Login extends Component {
     render() {
         return (
             <div className='Login_wrap w100p h100p clearfix'>
-                <div className='form bgc-white tc pt-50 P_auto'>
+                <div className='form bgc-white tc pt-50 absolute absolute--fill'>
                     <span className='font icon-react'></span>
                     <FormBox submit={this.submit} />
                 </div>
